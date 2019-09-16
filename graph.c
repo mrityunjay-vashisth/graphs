@@ -27,7 +27,7 @@ void add_edge(graph_t* g, int src, int dst, int directed) {
 	nd->next = g->arr[src].head;
 	g->arr[src].head = nd;
 
-	if (directed) {
+	if (!directed) {
 		nd =  create_list_node(src);
 		nd->next = g->arr[dst].head;
 		g->arr[dst].head = nd;
@@ -39,7 +39,7 @@ void add_edge(graph_t* g, int src, int dst, int directed) {
 void print_graph(graph_t* g) {
 	for (int i = 0; i < g->V; i++) {
 		adj_list_node_t* h = g->arr[i].head;
-		printf("SRC : %d\nHEAD", i);
+		printf("SRC : [%d]", i);
 		
 		while (h) {
 			printf("->%d", h->dst);

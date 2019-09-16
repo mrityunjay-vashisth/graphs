@@ -14,6 +14,7 @@ typedef struct Queue {
 queue_t* create_queue(int cap);
 void enqueue(queue_t *q, int val);
 int dequeu(queue_t *q);
+int empty(queue_t *q);
 void print_queue(queue_t* q);
 
 #endif

@@ -41,6 +41,12 @@ int get_top(cstack_t* s) {
 	return s->arr[s->top];
 }
 
+int stack_empty(cstack_t* s) {
+	if (s->top == -1)
+		return 1;
+	return 0;
+}
+
 void print_stack(cstack_t* s) {
 	if (s->top == -1) {
 		printf("Stack underflow\n");

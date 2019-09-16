@@ -49,6 +49,13 @@ int dequeu(queue_t *q) {
 }
 
 
+int empty(queue_t *q) {
+	if ((q->front == -1) && (q->rear == -1))
+		return 1;
+	return 0;
+}
+
+
 void print_queue(queue_t* q) {
 	int i;
 	for (i = 0; i < q->capacity; i++) {
